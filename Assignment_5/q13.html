@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3D Rotating Card</title>
+  <style>
+     
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.card-container {
+  perspective: 1000px;  
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 0.6s;
+}
+
+.card:hover {
+  transform: rotateY(180deg);  
+}
+
+.card-front, .card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.card-front {
+  background-color: #1eff00;
+  color: white;
+}
+
+.card-back {
+  background-color: white;
+  color: #1eff00;
+  transform: rotateY(180deg); 
+}
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-front">
+        <h2>Front</h2>
+      </div>
+      <div class="card-back">
+        <h2>Back</h2>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
