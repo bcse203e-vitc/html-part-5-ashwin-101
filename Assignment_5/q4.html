@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Menu </title>
+    <style>
+        .bar {
+        background-color: #14c803;
+        padding: 0;
+        }
+
+        .menu {
+        display: flex;
+        list-style: none;
+        margin:0;
+        padding:0;
+        }
+
+        .item{
+        position: relative;
+        }
+
+        .item a {
+        display: block;
+        padding: 15px 20px;
+        color: rgb(208, 208, 208);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: background-color 0.3s;
+        }
+
+        .item a:hover {
+        background-color: #7c7c7c;
+        }
+
+        .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        background-color: #dbd7d7;
+        list-style: none;
+        min-width: 200px;
+        }
+
+        .dropdown-menu li a {
+        padding: 10px 15px;
+        color: rgb(14, 13, 13);
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s;
+        }
+
+        .dropdown-menu li a:hover {
+        background-color: #cac8c8;
+        }
+
+        .item.dropdown:hover .dropdown-menu {
+        display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="bar">
+        <ul class="menu">
+            <li class="item dropdown">
+                <a href="#">Menu</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
